@@ -10,6 +10,8 @@ class Memory {
 private:
 	std::vector<std::uint8_t> buffer;
 
+	void checkIndexAndThrowIfOutOfBounds(std::uint64_t index);
+
 public:
 	void create(std::uint64_t size);
 	std::uint64_t getSize();
